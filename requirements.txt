@@ -1,1 +1,7 @@
-cohere
+cohere==5.15.0
+langdetect==1.0.9
+datasets==3.5.0
+tqdm
+scikit-learn
+torch
+pycountry
