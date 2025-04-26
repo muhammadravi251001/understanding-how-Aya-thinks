@@ -6,7 +6,7 @@ import torch
 from tqdm import tqdm
 
 # Initialize Cohere Client
-co = cohere.Client("YOUR_COHERE_API")  # Replace with your API key
+co = cohere.Client("YOUR_COHERE_API_KEY")  # Replace with your API key
 
 model_name = 'nlptown/bert-base-multilingual-uncased-sentiment'
 tokenizer = BertTokenizer.from_pretrained(model_name)

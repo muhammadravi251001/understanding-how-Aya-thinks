@@ -8,7 +8,7 @@ from tqdm import tqdm
 import time
 
 # Initialize Cohere Client
-co = cohere.Client("YOUR_COHERE_API")  # Replace with your API key
+co = cohere.Client("YOUR_COHERE_API_KEY")  # Replace with your API key
 
 def get_token_probabilities(text: str, max_tokens: int = 20):
     """
