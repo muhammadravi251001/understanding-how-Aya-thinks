@@ -5,7 +5,7 @@ from tqdm import tqdm
 import pycountry
 
 # Initialize Cohere Client
-co = cohere.Client("dWGFMwW5UwDcVW2CtO432daHiy5JA63rOFBxHR0d")  # Replace with your API key
+co = cohere.Client("YOUR_COHERE_API_KEY")  # Replace with your API key
 
 def convert_lang_code_2_to_3(code_2: str) -> str:
     """
