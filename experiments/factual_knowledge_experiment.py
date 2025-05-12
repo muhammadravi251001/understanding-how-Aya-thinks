@@ -5,7 +5,7 @@ from tqdm import tqdm
 import pycountry
 
 # Initialize Cohere Client
-co = cohere.Client("YOUR_COHERE_API_KEY")  # Replace with your API key
+co = cohere.Client("dWGFMwW5UwDcVW2CtO432daHiy5JA63rOFBxHR0d")  # Replace with your API key
 
 def convert_lang_code_2_to_3(code_2: str) -> str:
     """
@@ -78,6 +78,7 @@ def evaluate(language: str) -> list:
         # Store results
         results.append({
             "language": convert_lang_code_2_to_3(language),
+            "fact_id": f'{item["sub_uri"]}_{item["predicate_id"]}_{item["obj_uri"]}',
             "subject": subject,
             "relation": relation,
             "question": question,

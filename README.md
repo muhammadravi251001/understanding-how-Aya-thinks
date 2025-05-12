@@ -28,7 +28,7 @@
 This research is part of the **Cohere Expedition: Aya Program**, an initiative to explore and better understand the capabilities, behaviors, and multilingual reasoning of the Aya model.  
 We investigate how Aya internally processes information across languages and whether English-centric reasoning is prevalent.
 
-You can read our [📄 Research Ideas and Framework here](https://docs.google.com/document/d/1F5JfcpT1whHLKkwHnCnAWsi6gJ1dTF_rdRq1q8bH_js/edit?usp=sharing).
+You can read our [📄 Research Ideas and Framework here](https://docs.google.com/document/d/1F5JfcpT1whHLKkwHnCnAWsi6gJ1dTF_rdRq1q8bH_js/edit?usp=sharing) and [📊 Slides](https://docs.google.com/presentation/d/1o1uNmBi6_8UBuPOvolVvwMJ8cr2A4cgcjIcx17PxX1E/edit?usp=sharing).
 
 ---
 
@@ -44,15 +44,15 @@ Aya Expanse is described as a **highly performant multilingual model** capable o
 
 ### 1. Aya's English-First Bias (English-First Ratio)
 - Aya shows **low overall English-centric bias** (English-First Ratio = **15%**).
-- Certain languages like **English** and **Sundanese** still exhibit strong English-first processing.
+- Certain languages like **English** and **Santhali** still exhibit strong English-first processing.
 
-> 🎯 **Main Answer**: ✅ Aya thinks in English **for some languages**, but **not universally**.
+> 🎯 **Main Answer**: ❌ Aya does **not consistently "think" in English first**, *despite a small fraction of languages showing strong English-first processing*.
 
 ---
 
 ### 2. Aya's Token Likelihoods (Cosine Similarity)
 - **Average cosine similarity** is **0.244**, showing moderate English similarity.
-- **Only English** itself exhibits near-perfect similarity (cosine = **1.000**).
+- **Only English** itself exhibits near-perfect similarity (cosine = **0.803**).
 
 > 🎯 **Main Answer**: ❌ Aya **does not** consistently process languages with English-like token distributions.
 
@@ -60,9 +60,9 @@ Aya Expanse is described as a **highly performant multilingual model** capable o
 
 ### 3. Aya’s QA Performance (Translation Impact)
 - **Performance strongest in English**.
-- Translating questions into English **helps in some cases**, but **not always**.
+- Aya's multilingual capabilities might still require more **adaptation** and **refinement** for non-English languages.
 
-> 🎯 **Main Answer**: ⚡ Translation **sometimes** improves QA but is **not a silver bullet**.
+> 🎯 **Main Answer**: ✅ **Yes, translation improves Aya's QA performance** in the sense that **Aya performs better on English inputs**.
 
 ---
 
@@ -75,19 +75,28 @@ Aya Expanse is described as a **highly performant multilingual model** capable o
 ---
 
 ### 5. Aya's Factual Consistency Across Languages
-- Aya's factual knowledge **is not perfectly neutral** across languages.
-- **Semantic similarity** is **good (average 0.741)** but with significant variation.
 
-> 🎯 **Main Answer**: ❌ Aya **does not** store factual knowledge completely neutrally.
+Aya's factual knowledge **is not fully neutral** across languages. **Factual consistency** varies significantly, with an overall consistency rate of just **34.5%**. Additionally, **semantic similarity** between answers is **moderate**, with an average embedding similarity of **0.674**, but still shows **notable variation** across languages.
+
+> 🎯 **Main Answer**: ❌ Aya **does not** store factual knowledge in a fully language-neutral way.
+
+---
+
+Here’s the summary in well-structured English:
 
 ---
 
 ## ✨ Final Summary Conclusion
 
-Aya’s internal "thinking" displays **mixed English-first tendencies**, but the model is **not dominated by English across the board**.  
-**English and related languages** show biases, yet Aya maintains **strong multilingual adaptation** for many other languages.
+Aya exhibits **mixed English-first tendencies**, but overall, it does **not consistently rely on English** across all languages. While **English and some related languages** show stronger English-first processing, Aya demonstrates **adequate multilingual capabilities** for other languages.
 
-> 🧠 **Final Verdict**: ❌ Aya does **not consistently think in English first**, though **English-centric bias exists** for some languages.
+* **English-first bias**: Aya shows a **low overall English-centric bias** (English-First Ratio = **15%**), with certain languages like **English** and **Santhali** displaying stronger English-first processing.
+* **Token likelihoods**: The **average cosine similarity** is **0.244**, indicating moderate similarity to English. **Only English** itself exhibits near-perfect similarity (**0.803**).
+* **QA performance**: Aya performs **best in English**, and while it shows promising multilingual capabilities, it still requires more **adaptation and refinement** for non-English languages.
+* **Sentiment steering**: Aya is much **more steerable in English**, with stronger sentiment shifts. Languages like **Telugu** and **Swahili** show weaker steerability.
+* **Factual consistency**: Aya's **factual knowledge is not fully neutral** across languages. **Factual consistency** varies, with an overall consistency rate of **34.5%**. Additionally, **semantic similarity** between answers is moderate (average similarity of **0.674**), though there is **notable variation** across languages.
+
+> 🧠 **Final Verdict**: Aya **does not consistently think in English first**, though certain languages show English-centric behavior. While it handles many languages reasonably well, Aya’s **internal knowledge and behavior are not fully language-neutral**, with **notable performance and consistency differences across languages**.
 
 ---
 
